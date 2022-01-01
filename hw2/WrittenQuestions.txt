@@ -1,0 +1,27 @@
+<<Adina Palayoor>>
+HW2
+Written Questions
+
+3.1
+Base Case: S(1) =2
+Recursive Case: S(N) = S(N/2) +log(N)
+
+3.2
+
+S(N)   = S(N/2) + log(N)
+S(N/2) = S(N/4) + log(N/2)
+S(N/4) = S(N/8) + log(N/4)
+
+S(N) = S(N/2) 			    + log(N)
+	 = [S(N/4) +log(N/2)+2] + log(N)
+	 = [[S(N/8) + log(N/4)] +log(N/2)] + log(N) 
+	 = S(N/8) + [log(N/4) +log(N/2) +log(N)]
+	 = S(N/8) + [log(N^3/8)]
+	 = S(N/2^3) + [log(N^3/8)]
+	 = S(N/2^n) + [log(N^3)-log(8)]
+	 = S(1)  + [log(N^3)-log(8)]
+	 = 2 + [log(N^3)-log(8)]
+	 = 2 + [3log(N)-log(8)]
+	 = 2 + [klog(N)-log(2^k)]
+S(N) = 2 + (log(N)*log(N)) - (log(N)*(log(N)-1)/2)
+	
